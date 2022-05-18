@@ -1,0 +1,18 @@
+Basic Structure of any Legacy Bitcoin Transaction
+
+Version (4 bytes, little endian):
+Input Count (VarLen):
+Input(s):
+    TXID (32 bytes, little endian):
+    VOUT (4 bytes, little endian):
+    ScriptSig (big endian):
+        Size (VarLen):
+        ScriptSig (unlocking script):
+    Sequence (4 bytes):
+Output Count (VarLen):
+Output(s):
+    Amount (8 bytes, sats value, little endian):
+    ScriptPubKey (big endian):
+        Size (VarLen):
+        ScriptPubKey (locking script):
+Locktime:
